@@ -28,8 +28,10 @@ func (p *Plugin) getOAuthConfig() oauth2.Config {
 
 	// Test server run with https://www.npmjs.com/package/oauth2-mock-server
 	// Replace this with the appropriate values from your external integration
-	authURL := "http://localhost:8080/authorize"
-	tokenURL := "http://localhost:8080/token"
+	// Example Service Now REdirect URL:
+	// https:/<Mattermost SERVER URL>/plugins/oauth-example/oauth2/complete
+	authURL := conf.ServiceNowOAuth2URL + "/oauth_auth.do"
+	tokenURL := conf.ServiceNowOAuth2URL + "/oauth_token.do"
 
 	// Arbitrary scopes supported by external service
 	scopes := getOAuthScopesForExternalService()

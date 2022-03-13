@@ -18,8 +18,9 @@ import (
 // If you add non-reference types to your configuration struct, be sure to rewrite Clone as a deep
 // copy appropriate for your types.
 type configuration struct {
-	OAuth2ClientId     string
-	OAuth2ClientSecret string
+	ServiceNowOAuth2URL string
+	OAuth2ClientId      string
+	OAuth2ClientSecret  string
 }
 
 // Clone shallow copies the configuration. Your implementation may require a deep copy if

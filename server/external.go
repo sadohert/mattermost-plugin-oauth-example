@@ -30,5 +30,5 @@ func (p *Plugin) getExternalClient(userID string) (*ExternalServiceClient, error
 }
 
 func getOAuthScopesForExternalService() []string {
-	return []string{"user:read", "user:write"}
+	return []string{"useraccount"}
 }
